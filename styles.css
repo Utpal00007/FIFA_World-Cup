@@ -78,6 +78,9 @@
 }
 .upcoming-matches-right {
   flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px;
 }
 .upcoming-matches-right .card {
   border: 1px solid rgba(232, 232, 232, 1);
@@ -105,4 +108,21 @@
 .card-bottom {
   display: flex;
   gap: 20px;
+}
+
+@media (max-width: 992px) {
+  .upcoming-matches {
+    flex-direction: column;
+  }
+  .upcoming-matches-left {
+    flex-direction: row;
+    width: 100%;
+    background-color: transparent;
+  }
+  .upcoming-matches-left > * {
+    flex: 1;
+  }
+  .upcoming-matches-left .btn {
+    border: 1px solid rgba(232, 232, 232);
+  }
 }
