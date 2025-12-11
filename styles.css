@@ -18,6 +18,9 @@
   color: white;
   border: none;
 }
+img {
+  max-width: 100%;
+}
 
 /* custom styles  */
 .banner {
@@ -32,6 +35,10 @@
 
 .banner-left {
   padding-left: 25px;
+  flex: 1;
+}
+.banner-right {
+  flex: 1;
 }
 
 .banner h2 {
@@ -110,7 +117,17 @@
   gap: 20px;
 }
 
+/* laptop or tab  */
+
 @media (max-width: 992px) {
+  /* banner */
+  .banner h2 {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 50px;
+  }
+
+  /* Upcoming Matches */
   .upcoming-matches {
     flex-direction: column;
   }
@@ -124,5 +141,24 @@
   }
   .upcoming-matches-left .btn {
     border: 1px solid rgba(232, 232, 232);
+  }
+  .upcoming-matches-right {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  /* banner */
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .banner .banner-left p {
+    /* max-width: 100%; */
+    margin: 15px auto;
+  }
+  .banner-left {
+    padding: 0;
+    padding-top: 30px;
   }
 }
