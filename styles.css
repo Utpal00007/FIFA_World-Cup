@@ -28,8 +28,12 @@ img {
     opacity: 0;
     transform: translate(-20px);
   }
+  5% {
+    color: orange;
+  }
   50% {
     opacity: 0.5;
+    color: yellow;
     transform: translate(-10ox);
   }
   100% {
@@ -86,7 +90,7 @@ img {
 
 .banner-right img {
   display: block;
-  animation: banner-player-animation 1s ease-in infinite;
+  animation: banner-player-animation 1s ease-in forwards;
 }
 
 /* Upcoming Matches */
